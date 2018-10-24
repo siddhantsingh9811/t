@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>webpage</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="animate.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Montserrat:900" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class=" a section1">
+		<div class="sub1">
+			<div class="text1">
+				<h1 class="t1">
+					<div class="try">
+						<!-- <span>LOREM IPSUM</span> -->
+						<span class="bcol1"><span>LOREM</span>&nbsp <span>IPSUM</span></span>
+						<span class="col1"><span>LOREM</span>&nbsp <span>IPSUM</span></span>
+					</div>
+				</h1>
+				<div class="subhead">
+					<p class="p1 animate slideInUp">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="sub2"></div>
+	</div>
+	<div class=" a section2">
+		<center>	
+			<div class="head1">
+				
+				<h1 class="t2">
+					<div class="try2">
+						<span class="bcol2">
+							<span>HOW</span>&nbsp<span>IT</span>&nbsp<span>WORKS</span>
+						</span>
+						<span class="col2">
+							<span>HOW</span>&nbsp<span>IT</span>&nbsp<span>WORKS</span>
+						</span>
+					</div>
+				</h1>
+				<div class="subhead">
+					<p class="p2">Lorem ipsum dolor sit amet, consectetur adipisicings</p>
+				</div>
+			</div>
+			<div class="boxes">
+				<div class="b b1"></div>
+				<div class="b b2"></div>
+				<div class="b b3"></div>
+				<div class="b b4"></div>
+			</div>
+		</center>
+	</div>
+	<div class=" a section3">
+		<div class="watch">
+			<img class="img" src="watch.png">
+			<div class="pointers">
+				<div class="i1">
+					<div class="c"></div>
+					<div class="line1"></div>
+					<div class="line2"></div>
+				</div>
+				<div class="i2">
+					<div class="line1"></div>
+					<div class="line2"></div>
+					<div class="c"></div>
+				</div>
+				<div class="i3">
+					<div class="line1"></div>
+					<div class="line2"></div>
+					<div class="c"></div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+	<div class=" a section4"></div>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.bcol1').css(
+				"animation","ani 2s"
+				)
+			function a() {
+				$('.col1').css("animation","ani 1.7s")
+
+			}
+			function b(){
+				$('.col1').css("width","100%")
+
+			}
+			setTimeout(a, 300);
+			setTimeout(b, 2000);
+			$(window).scroll(function(){
+				var top = $(this).scrollTop()
+				console.log(top)
+				if (top>= 330) {
+					$('.bcol2').css(
+						"animation","ani 2s"
+						)
+					function a2() {
+						$('.col2').css("animation","ani 1.7s")
+						$('.p2').css("animation-name","g")
+
+					}
+					function b2(){
+						$('.col2').css("width","100%")
+						$('.bcol2').css("width","100%")
+						$('.p2').css("transform","translateY(0%)")
+
+					}
+					setTimeout(a2, 300);
+					setTimeout(b2, 2000);
+				}
+			})
+			$(window).scroll(function(){
+				var top = $(this).scrollTop()
+				if (top>= 550){
+					function a1(){
+						$('.b1').addClass('animated fadeIn');
+					}
+					function a2(){
+						$('.b2').addClass('animated fadeIn');
+					}
+					function a3(){
+						$('.b3').addClass('animated fadeIn');
+					}
+					function a4(){
+						$('.b4').addClass('animated fadeIn');
+					}
+					setTimeout(a1,500)
+					setTimeout(a2,500)
+					setTimeout(a3,500)
+					setTimeout(a4,500)
+
+				}
+			})
+			
+		})
+	</script>
+</body>
+</html>
